@@ -11,6 +11,7 @@
 
 @section('content')
 <div class="container-fluid table-responsive" style="background-color:#ddeedd;border-top:2px solid green;border-radius:15px;border-right:2px solid green;">
+
 <table class="table table-bordered table-striped">
 <thead class="thead-dark">
 <tr>
@@ -37,6 +38,7 @@
 @endforeach
 </tbody>
 </table>
+
 </div>
 <br>
 @stop

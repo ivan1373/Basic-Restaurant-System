@@ -9,6 +9,7 @@
 
 @section('content')
 <div class="container-fluid" style="background-color:#dddddd;border-top:2px solid darkgray;border-right:2px solid darkgray;border-radius:15px;">
+
 <table class="table table-bordered table-striped table-responsive">
 <thead class="thead-dark">
 <tr>
@@ -35,6 +36,7 @@
 @endforeach
 </tbody>
 </table>
+
 </div>
 
 @stop

@@ -13,7 +13,7 @@
           <input type="number" class="form-control" placeholder="Broj gostiju...">
         </div><br>
         <input type="submit" class="btn btn-success" value="POTVRDI!">
-      </div>
+      </div><br>
       <div class="col-md-6 text-left">
         <div class="form-group">
           <input type="date" class="form-control" placeholder="Datum...">

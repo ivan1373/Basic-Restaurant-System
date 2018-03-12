@@ -9,6 +9,7 @@
   </div>
   <div class="container-fluid"><br>
   <input class="form-control" id="myInput" type="text" placeholder="Pretražite meni..."><br>
+<div class="table-responsive">
   <table  class="table table-striped table-bordered" >
     <thead>
       <tr>
@@ -29,6 +30,7 @@
       @endforeach
     </tbody>
   </table>
+</div>
 </div>
 <div class="container-fluid" id="lokacija" style="margin-bottom:35px;margin-top:35px;">
   <div class="row slideanim">
