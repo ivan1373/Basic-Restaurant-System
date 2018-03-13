@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Meni;
+use App\User;
 
-class MeniController extends Controller
+class UserController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -28,11 +28,7 @@ class MeniController extends Controller
     public function create()
     {
         //
-      /*  return Meni::create([
-          'naziv' => $data['naziv'],
-          'cijena' => $data['cijena'],
-          'sastojci' => $data['sastojci']
-        ]);*/
+
     }
 
     /**
@@ -44,25 +40,7 @@ class MeniController extends Controller
     public function store(Request $request)
     {
         //
-        $meni = new Meni;
 
-        $this->validate(request(),[
-
-            'naziv' => 'required',
-            'cijena' => 'required'
-        ]);
-
-        $meni->naziv = $request->get('naziv');
-        $meni->cijena = $request->get('cijena');
-        $meni->sastojci = $request->get('sastojci');
-        $meni->link_slike = $request->get('link');
-
-        $meni->save();
-
-
-
-
-        return back();
     }
 
     /**
@@ -85,6 +63,8 @@ class MeniController extends Controller
     public function edit($id)
     {
         //
+        $user = User::findOrFail($id);
+        return view('admin.urediUser',compact('user'));
     }
 
     /**
@@ -108,9 +88,9 @@ class MeniController extends Controller
     public function destroy($id)
     {
         //
-        $row = Meni::findOrFail($id);
+        $row = User::findOrFail($id);
         $row->delete();
-      
+
         return back();
     }
 }

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Meni;
 
 class PagesController extends Controller
 {
@@ -21,5 +22,10 @@ class PagesController extends Controller
     public function rezervacija()
     {
       return view('stranice.rezervacija');
+    }
+
+    public function vizija()
+    {
+      return view('stranice.vizija');
     }
 }

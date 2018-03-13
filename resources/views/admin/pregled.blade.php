@@ -9,7 +9,7 @@
 
 @section('content')
 <div class="container-fluid" style="background-color:#dddddd;border-top:2px solid darkgray;border-right:2px solid darkgray;border-radius:15px;">
-
+<div class="table-responsive">
 <table class="table table-bordered table-striped table-responsive">
 <thead class="thead-dark">
 <tr>
@@ -29,14 +29,14 @@
   <td class="text-center">{{$user->email}}</td>
   <td class="text-center">{{$user->password}}</td>
   <td class="text-center">{{($user->admin)?'Administrator':'Registrirani Korisnik'}}</td>
-  <td class="text-center"><a class="btn btn-warning" href="{{ url('/admin/pregled/urediUser')}}" role="button">UREDI!</a>&nbsp &nbsp
-    <button role="button" class="btn btn-danger">IZBRIŠI!</button>
+  <td class="text-center"><a class="btn btn-success" href="{{ url('/admin/pregled/urediUser/')}}/{{ $user->id }}" role="button">UREDI!</a>&nbsp &nbsp
+    <a class="btn btn-danger" href="{{ url('/admin/pregled/brisi/')}}/{{ $user->id }}" role="button">IZBRIŠI!</a>
   </td>
 </tr>
 @endforeach
 </tbody>
 </table>
-
+</div>
 </div>
 
 @stop

@@ -26,10 +26,7 @@ class AdminLteController extends Controller
       return view('admin.dodaj');
     }
 
-    public function adminPromKor()
-    {
-      return view('admin.urediUser');
-    }
+    
 
     public function adminpregled()
     {

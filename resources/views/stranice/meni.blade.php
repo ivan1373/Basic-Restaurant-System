@@ -9,7 +9,7 @@
   </div>
   <div class="container-fluid"><br>
   <input class="form-control" id="myInput" type="text" placeholder="Pretražite meni..."><br>
-<div class="table-responsive">
+  <div class="table-responsive">
   <table  class="table table-striped table-bordered" >
     <thead>
       <tr>

@@ -36,7 +36,7 @@
                       <li><a href="#o-nama" class="nav-link"><i class="fa fa-info" aria-hidden="true"></i>&nbsp O nama</a></li>
                       <li><a href="#kontakt" class="nav-link"><i class="fa fa-address-book" aria-hidden="true"></i>&nbsp Kontakt</a></li>
                       <li><a href="{{ url('/meni') }}" class="nav-link"><i class="fa fa-cutlery" aria-hidden="true"></i>&nbsp Meni</a></li>
-                      <li><a href="{{ url('/meni') }}" class="nav-link"><i class="fa fa-book" aria-hidden="true"></i>&nbsp Vizija</a></li>
+                      <li><a href="{{ url('/vizija') }}" class="nav-link"><i class="fa fa-book" aria-hidden="true"></i>&nbsp Vizija</a></li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->

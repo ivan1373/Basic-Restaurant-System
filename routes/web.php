@@ -13,8 +13,9 @@
 
 Route::get('/', 'PagesController@index');
 
-Route::get('/meni', 'MeniController@index');
+Route::get('/meni', 'PagesController@meni');
 Route::get('/rezervacija','PagesController@rezervacija');
+Route::get('/vizija','PagesController@vizija');
 
 Auth::routes();
 
@@ -27,9 +28,12 @@ Route::get('/admin/pregled', 'AdminLteController@adminpregled');
 Route::get('/admin/pregl_meni', 'AdminLteController@adminpregledmeni');
 Route::get('/admin/info', 'AdminLteController@admininfo');
 Route::get('/admin/pregl_rez', 'AdminLteController@adminrez');
-Route::get('/admin/pregled/urediUser', 'AdminLteController@adminPromKor');
+Route::get('/admin/pregled/urediUser/{id}', 'UserController@edit');
+//Route::get('/admin/pregl_meni/urediUser/{id}', 'UserController@edit');
 
 Route::post('/admin/dodaj/spremi', 'MeniController@store');
+Route::get('/admin/pregl_meni/brisi/{id}','MeniController@destroy');
+Route::get('/admin/pregled/brisi/{id}','UserController@destroy');
 
 Route::get('admin', ['middleware' => ['auth', 'admin'], function() {
     return "this page requires that you be logged in and an Admin";

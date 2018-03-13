@@ -10,20 +10,20 @@
 <br>
     <div class="container-fluid">
       <div class="row">
-        <div class="col-md-4" style="border:1px solid gray;border-radius:10px;">
+        <div class="col-md-4">
           <h3 class="text-center" style="font-style:italic;">TRENUTNI PODACI</h3><hr style="height: 12px;border: 0;box-shadow: inset 0 12px 12px -12px rgba(0, 0, 0, 0.5);">
           <ul class="list-group">
             <li class="list-group-item">
-              <b>Ime</b> &nbsp &nbsp<i class="fa fa-arrow-right"></i>
+              <b>Ime</b> &nbsp &nbsp<i class="fa fa-arrow-right"></i>&nbsp<cite>{{$user -> name}}</cite>
             </li><br>
             <li class="list-group-item">
-              <b>E-mail Adresa</b> &nbsp &nbsp<i class="fa fa-arrow-right"></i>
+              <b>E-mail Adresa</b> &nbsp &nbsp<i class="fa fa-arrow-right"></i>&nbsp<cite>{{$user -> email}}</cite>
             </li><br>
             <li class="list-group-item">
-              <b>Vrsta Korisnika</b> &nbsp &nbsp<i class="fa fa-arrow-right"></i>
+              <b>Vrsta Korisnika</b> &nbsp &nbsp<i class="fa fa-arrow-right"></i>&nbsp<cite>{{($user->admin)?'Administrator':'Registrirani Korisnik'}}</cite>
             </li><br>
             <li class="list-group-item">
-              <b>Lozinka</b> &nbsp &nbsp<i class="fa fa-arrow-right"></i>
+              <b>Lozinka</b> &nbsp &nbsp<i class="fa fa-arrow-right"></i>&nbsp<cite>{{$user -> password}}</cite>
             </li>
           </ul>
         </div>

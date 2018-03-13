@@ -11,7 +11,7 @@
 
 @section('content')
 <div class="container-fluid table-responsive" style="background-color:#ddeedd;border-top:2px solid green;border-radius:15px;border-right:2px solid green;">
-
+<div class="table-responsive">
 <table class="table table-bordered table-striped">
 <thead class="thead-dark">
 <tr>
@@ -32,13 +32,13 @@
   <td class="text-center">{{$row->sastojci}}</td>
   <td class="text-center">{{$row->cijena}}</td>
   <td class="text-center"><button role="button" class="btn btn-success">IZMIJENI!</button>&nbsp &nbsp
-    <button role="button" class="btn btn-danger">IZBRIŠI!</button>
+    <a class="btn btn-danger" href="{{ url('/admin/pregl_meni/brisi/')}}/{{ $row->id }}" role="button">IZBRIŠI!</a>
   </td>
 </tr>
 @endforeach
 </tbody>
 </table>
-
+</div>
 </div>
 <br>
 @stop
