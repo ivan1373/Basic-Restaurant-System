@@ -15,7 +15,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'admin', 'email', 'password',
     ];
 
     /**
@@ -32,7 +32,7 @@ class User extends Authenticatable
 
             return $this->admin; // this looks for an admin column in your users table
     }
-        
+
 
 
 }

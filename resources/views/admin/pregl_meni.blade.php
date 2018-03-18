@@ -31,7 +31,7 @@
   <td class="text-center">{{$row->naziv}}</td>
   <td class="text-center">{{$row->sastojci}}</td>
   <td class="text-center">{{$row->cijena}}</td>
-  <td class="text-center"><button role="button" class="btn btn-success">IZMIJENI!</button>&nbsp &nbsp
+  <td class="text-center"><a class="btn btn-success" href="{{ url('/admin/pregl_meni/urediMeni/')}}/{{ $row->id }}" role="button">IZMIJENI!</a>&nbsp &nbsp
     <a class="btn btn-danger" href="{{ url('/admin/pregl_meni/brisi/')}}/{{ $row->id }}" role="button">IZBRIŠI!</a>
   </td>
 </tr>

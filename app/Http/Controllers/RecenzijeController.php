@@ -3,9 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Meni;
+use App\recenzija;
+use Auth;
 
-class MeniController extends Controller
+
+
+class RecenzijeController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -44,22 +47,21 @@ class MeniController extends Controller
     public function store(Request $request)
     {
         //
-        $meni = new Meni;
+        $rec = new recenzija;
 
         $this->validate(request(),[
 
-            'naziv' => 'required',
-            'cijena' => 'required'
+            'title' => 'required',
+            'body' => 'required'
         ]);
 
-        $meni->naziv = $request->get('naziv');
-        $meni->cijena = $request->get('cijena');
-        $meni->sastojci = $request->get('sastojci');
-        $meni->link_slike = $request->get('link');
+        $rec->title = $request->get('title');
+        $rec->body = $request->get('body');
+        $rec->user_id =  Auth::user()->id;
+      //  $meni->link_slike = $request->get('link');
+        session()->flash('rec','Vaša recenzija je pohranjena!');
+        $rec->save();
 
-        $meni->save();
-
-        session()->flash('spremanje','Jelo uspješno spremljeno!');
 
 
 
@@ -86,8 +88,6 @@ class MeniController extends Controller
     public function edit($id)
     {
         //
-        $meni = Meni::findOrFail($id);
-        return view('admin.urediMeni',compact('meni'));
     }
 
     /**
@@ -100,27 +100,6 @@ class MeniController extends Controller
     public function update(Request $request, $id)
     {
         //
-        $this->validate(request(),[
-
-            'noviNaziv' => 'required',
-            'novaCijena' => 'required',
-            'noviSastojci' => 'required',
-            'noviLink'  => 'required'
-        ]);
-
-        $meni = Meni::findOrFail($id);
-
-
-
-
-        $meni->naziv = $request->get('noviNaziv');
-        $meni->cijena = $request->get('novaCijena');
-        $meni->sastojci = $request->get('noviSastojci');
-        $meni->link_slike = $request->get('noviLink');
-
-        $meni->save();
-        session()->flash('message','Uspješna izmjena podataka!');
-        return back();
     }
 
     /**
@@ -132,9 +111,9 @@ class MeniController extends Controller
     public function destroy($id)
     {
         //
-        $row = Meni::findOrFail($id);
+      /*  $row = Meni::findOrFail($id);
         $row->delete();
 
-        return back();
+        return back();*/
     }
 }

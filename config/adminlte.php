@@ -32,7 +32,7 @@ return [
 
     'logo' => '<b>Restoran Elite </b>admin',
 
-    'logo_mini' => '<b>RE</b>',
+    'logo_mini' => '<b>R. E.</b>',
 
     /*
     |--------------------------------------------------------------------------
@@ -45,7 +45,7 @@ return [
     |
     */
 
-    'skin' => 'green',
+    'skin' => 'blue',
 
     /*
     |--------------------------------------------------------------------------
@@ -128,6 +128,13 @@ return [
             'text'        => 'Pregled rezervacija',
             'url'         => '/admin/pregl_rez',
             'icon'        => 'cutlery',
+          //  'label'       => 1,
+            'label_color' => 'success',
+        ],
+        [
+            'text'        => 'Recenzije',
+            'url'         => '/admin/recenzije',
+            'icon'        => 'star',
           //  'label'       => 1,
             'label_color' => 'success',
         ],

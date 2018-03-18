@@ -1,5 +1,9 @@
 @import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);@charset "UTF-8";
 
+.hoverc a:hover {
+  color: darkblue;
+}
+
 h4 {
   font-family: 'Play', sans-serif;
 }

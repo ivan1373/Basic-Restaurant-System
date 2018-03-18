@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Meni;
 use App\User;
+use App\recenzija;
 
 class AdminLteController extends Controller
 {
@@ -26,7 +27,13 @@ class AdminLteController extends Controller
       return view('admin.dodaj');
     }
 
-    
+    public function recenzije()
+    {
+      $recs = recenzija::all();
+      return view('admin.recenzije')->with('recs',$recs);
+    }
+
+
 
     public function adminpregled()
     {

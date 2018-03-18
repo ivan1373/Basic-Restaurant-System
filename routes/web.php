@@ -16,20 +16,27 @@ Route::get('/', 'PagesController@index');
 Route::get('/meni', 'PagesController@meni');
 Route::get('/rezervacija','PagesController@rezervacija');
 Route::get('/vizija','PagesController@vizija');
+Route::get('/recenzije','PagesController@rec');
+Route::get('/create_rec','PagesController@stvoriRec');
+Route::post('/create_rec/spremiRec','RecenzijeController@store');
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/admin', 'AdminLteController@admin');
-
+Route::get('/admin/recenzije','AdminLteController@recenzije');
 Route::get('/admin/dodaj', 'AdminLteController@admindodaj');
 Route::get('/admin/pregled', 'AdminLteController@adminpregled');
 Route::get('/admin/pregl_meni', 'AdminLteController@adminpregledmeni');
 Route::get('/admin/info', 'AdminLteController@admininfo');
 Route::get('/admin/pregl_rez', 'AdminLteController@adminrez');
 Route::get('/admin/pregled/urediUser/{id}', 'UserController@edit');
-//Route::get('/admin/pregl_meni/urediUser/{id}', 'UserController@edit');
+Route::get('/admin/pregl_meni/urediMeni/{id}', 'MeniController@edit');
+Route::put('/admin/pregled/urediUser/{id}','UserController@update');
+Route::put('/admin/info/{id}','UserController@updateAdmin');
+Route::put('/admin/pregl_meni/urediMeni/{id}','MeniController@update');
+
 
 Route::post('/admin/dodaj/spremi', 'MeniController@store');
 Route::get('/admin/pregl_meni/brisi/{id}','MeniController@destroy');

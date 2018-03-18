@@ -23,7 +23,7 @@
 
         <nav class="navbar navbar-expand-md navbar-dark bg-dark navbar-laravel navbar-fixed-top">
             <div class="container-fluid">
-                <a class="navbar-brand" style="font-weight:bolder" href="{{ url('/') }}">
+                <a class="navbar-brand" style="font-weight:bolder;color:orange!important;" href="{{ url('/') }}">
                     {{ config('app.name') }}
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -37,6 +37,7 @@
                       <li><a href="#kontakt" class="nav-link"><i class="fa fa-address-book" aria-hidden="true"></i>&nbsp Kontakt</a></li>
                       <li><a href="{{ url('/meni') }}" class="nav-link"><i class="fa fa-cutlery" aria-hidden="true"></i>&nbsp Meni</a></li>
                       <li><a href="{{ url('/vizija') }}" class="nav-link"><i class="fa fa-book" aria-hidden="true"></i>&nbsp Vizija</a></li>
+                      <li><a href="{{ url('/recenzije') }}" class="nav-link"><i class="fa fa-star" aria-hidden="true"></i>&nbsp Recenzije</a></li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -48,18 +49,22 @@
                             <li><a class="nav-link" href="{{ route('register') }}"><i class="fa fa-user-plus" aria-hidden="true"></i>&nbsp Registracija</a></li>
                         @else
                             <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <a style="color:red!important;" id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
 
-                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <div class="dropdown-menu bg-primary" aria-labelledby="navbarDropdown">
                                         @if(Auth::user()->admin)
-                                        <a class="dropdown-item" href="{{ url('/admin') }}">Admin</a>
+
+                                        <a class="dropdown-item text-dark" href="{{ url('/admin') }}"><i class="fa fa-cog"></i>Admin</a>
                                         @endif
-                                        <a class="dropdown-item" href="{{ url('/rezervacija') }}">Rezervacija</a>
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
+
+                                        <a  class="dropdown-item text-dark" href="{{ url('/rezervacija') }}"><i class="fa fa-bookmark-o"></i>Rezervacija</a>
+                                        <a class="dropdown-item text-dark" href="{{ url('/create_rec') }}"><i class="fa fa-star"></i>Recenzija</a>
+                                    <a class="dropdown-item text-dark" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
+                                                     <i class="fa fa-sign-out"></i>
                                         Logout
                                     </a>
 

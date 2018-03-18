@@ -57,6 +57,16 @@
                 <!-- /.col-lg-12 -->
             </div>
             <!-- /.row -->
+            @if(session()->has('spremanje'))
+              <div class="row">
+                <div class="alert alert-success">
+                  <button type="button" class="close" data-dismiss="alert" aria-hidden="true">
+                    &times;</button>
+
+                    {{session()->get('spremanje')}}
+                </div>
+              </div>
+            @endif
         </div>
         <!-- /#page-wrapper -->
 

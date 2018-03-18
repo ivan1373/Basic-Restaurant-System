@@ -33,7 +33,9 @@
         </div>
         <div class="col-md-4 text-center" style="border:1px solid gray;border-radius:10px;">
           <h3 style="font-style:italic;">PROMIJENITE PODATKE</h3><hr style="height: 12px;border: 0;box-shadow: inset 0 12px 12px -12px rgba(0, 0, 0, 0.5);">
-          <form>
+          <form method="post" action="{{ url('/admin/pregled/urediUser') }}/{{$user->id}}">
+            @csrf
+            {{method_field('PUT')}}
             <div class="form-group">
               <input class="form-control" name="novoIme" type="text" placeholder="Novo Ime...">
             </div><br>
@@ -41,7 +43,11 @@
               <input class="form-control" name="noviMail" type="text" placeholder="Nova E-mail Adresa...">
             </div><br>
             <div class="form-group">
-              <input class="form-control" name="novaVrsta" type="text" placeholder="Nova Vrsta Korisnika...">
+              <select name="vrsta" class="form-control" placeholder="vrsta korisnika">
+                  <option disabled selected>Izaberite vrstu korisnika</option>
+                  <option value="Registrirani">Registrirani Korisnik</option>
+                  <option value="Administrator">Administrator</option>
+              </select>
             </div><br>
             <div class="form-group">
               <input class="form-control" name="novaLozinka" type="text" placeholder="Nova Lozinka...">
@@ -50,6 +56,16 @@
           </form><br>
         </div>
       </div>
+      @if(session()->has('message'))
+        <div class="row">
+          <div class="alert alert-success">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">
+              &times;</button>
+
+              {{session()->get('message')}}
+          </div>
+        </div>
+      @endif
       <br><br><br>
     </div>
 @stop

@@ -77,7 +77,84 @@ class UserController extends Controller
     public function update(Request $request, $id)
     {
         //
+        $this->validate(request(),[
+
+            'novoIme' => 'required',
+            'noviMail' => 'required'
+        ]);
+
+        $user = User::findOrFail($id);
+
+
+
+        $admin = $request->get('vrsta');
+        if($admin == "Administrator")
+        {
+          $user->admin = '1';
+        }
+        else  {
+          $user->admin = '0';
+        }
+          $user->name = $request->get('novoIme');
+
+          $user->email = $request->get('noviMail');
+
+
+          $user->password = bcrypt($request->get('novaLozinka'));
+          $user->save();
+          session()->flash('message','Uspješna izmjena podataka!');
+          return back();
+
+
+      /*  $admin = request('vrsta');
+        $user->name = request('novoIme');
+        if($admin == "Administrator")
+        {
+          $user->admin = 1;
+        }
+        else  {
+          $user->admin = 0;
+        }
+        $user->mail = request('noviMail');
+
+
+        $user->password = request('novaLozinka');
+
+      //  $user->update($request->all());
+        $user->save();
+
+    *///    return back();
+
     }
+
+    public function updateAdmin(Request $request, $id)
+    {
+        //
+        $this->validate(request(),[
+
+            'novoIme' => 'required',
+            'noviMail' => 'required'
+        ]);
+
+        $user = User::findOrFail($id);
+
+
+        $user->name = $request->get('novoIme');
+        $user->admin = '1';
+        $user->email = $request->get('noviMail');
+        $user->password = bcrypt($request->get('novaLozinka'));
+
+        $user->save();
+
+        session()->flash('message','Uspješna izmjena podataka!');
+
+        return back();
+
+
+
+
+    }
+
 
     /**
      * Remove the specified resource from storage.
