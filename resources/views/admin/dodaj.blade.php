@@ -59,7 +59,7 @@
             <!-- /.row -->
             @if(session()->has('spremanje'))
               <div class="row">
-                <div class="alert alert-success">
+                <div style="background-color:#D4EDDA!important;color:green!important;" class="alert alert-success text-center">
                   <button type="button" class="close" data-dismiss="alert" aria-hidden="true">
                     &times;</button>
 

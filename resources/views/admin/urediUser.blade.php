@@ -55,10 +55,10 @@
             <input type="submit" class="btn btn-success" value="POTVRDI">
           </form><br>
         </div>
-      </div>
+      </div><br>
       @if(session()->has('message'))
         <div class="row">
-          <div class="alert alert-success">
+          <div style="background-color:#D4EDDA!important;color:green!important;" class="alert alert-success text-center">
             <button type="button" class="close" data-dismiss="alert" aria-hidden="true">
               &times;</button>
 

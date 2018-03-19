@@ -13,10 +13,10 @@
   <img class="img-responsive" src="https://www.knowmuhammad.org/img/noavatarn.png"><br>
   @if(session()->has('message'))
     <div class="row">
-      <div class="alert alert-success">
+      <div style="background-color:#D4EDDA!important;color:green!important;" class="alert alert-success text-center">
         <button type="button" class="close" data-dismiss="alert" aria-hidden="true">
           &times;</button>
-          
+
           {{session()->get('message')}}
       </div>
     </div>

@@ -20,10 +20,6 @@ Route::get('/recenzije','PagesController@rec');
 Route::get('/create_rec','PagesController@stvoriRec');
 Route::post('/create_rec/spremiRec','RecenzijeController@store');
 
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-
 Route::get('/admin', 'AdminLteController@admin');
 Route::get('/admin/recenzije','AdminLteController@recenzije');
 Route::get('/admin/dodaj', 'AdminLteController@admindodaj');
@@ -36,14 +32,25 @@ Route::get('/admin/pregl_meni/urediMeni/{id}', 'MeniController@edit');
 Route::put('/admin/pregled/urediUser/{id}','UserController@update');
 Route::put('/admin/info/{id}','UserController@updateAdmin');
 Route::put('/admin/pregl_meni/urediMeni/{id}','MeniController@update');
-
-
 Route::post('/admin/dodaj/spremi', 'MeniController@store');
 Route::get('/admin/pregl_meni/brisi/{id}','MeniController@destroy');
 Route::get('/admin/pregled/brisi/{id}','UserController@destroy');
 
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+
+//osigurava da samo admin moze pristupiti navedenim stranicama
 Route::get('admin', ['middleware' => ['auth', 'admin'], function() {
     return "this page requires that you be logged in and an Admin";
+
 }]);
 
+
 Route::get('admin', ['uses' => 'AdminLteController@admin', 'middleware' => ['auth', 'admin']]);
+Route::get('admin/recenzije', ['uses' => 'AdminLteController@admin', 'middleware' => ['auth', 'admin']]);
+Route::get('admin/dodaj', ['uses' => 'AdminLteController@admin', 'middleware' => ['auth', 'admin']]);
+Route::get('admin/pregl_meni', ['uses' => 'AdminLteController@admin', 'middleware' => ['auth', 'admin']]);
+Route::get('admin/info', ['uses' => 'AdminLteController@admin', 'middleware' => ['auth', 'admin']]);
+Route::get('admin/pregl_rez', ['uses' => 'AdminLteController@admin', 'middleware' => ['auth', 'admin']]);
