@@ -49,8 +49,8 @@ Route::get('admin', ['middleware' => ['auth', 'admin'], function() {
 
 
 Route::get('admin', ['uses' => 'AdminLteController@admin', 'middleware' => ['auth', 'admin']]);
-Route::get('admin/recenzije', ['uses' => 'AdminLteController@admin', 'middleware' => ['auth', 'admin']]);
-Route::get('admin/dodaj', ['uses' => 'AdminLteController@admin', 'middleware' => ['auth', 'admin']]);
-Route::get('admin/pregl_meni', ['uses' => 'AdminLteController@admin', 'middleware' => ['auth', 'admin']]);
-Route::get('admin/info', ['uses' => 'AdminLteController@admin', 'middleware' => ['auth', 'admin']]);
-Route::get('admin/pregl_rez', ['uses' => 'AdminLteController@admin', 'middleware' => ['auth', 'admin']]);
+Route::get('admin/recenzije', ['uses' => 'AdminLteController@recenzije', 'middleware' => ['auth', 'admin']]);
+Route::get('admin/dodaj', ['uses' => 'AdminLteController@admindodaj', 'middleware' => ['auth', 'admin']]);
+Route::get('admin/pregl_meni', ['uses' => 'AdminLteController@adminpregledmeni', 'middleware' => ['auth', 'admin']]);
+Route::get('admin/info', ['uses' => 'AdminLteController@admininfo', 'middleware' => ['auth', 'admin']]);
+Route::get('admin/pregl_rez', ['uses' => 'AdminLteController@adminrez', 'middleware' => ['auth', 'admin']]);
