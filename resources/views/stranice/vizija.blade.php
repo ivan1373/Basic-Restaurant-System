@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
 
-<div class="container"><br><br>
+<div id="vizija" class="container-fluid"><br><br>
   <h2 class="text-center">Restoran Elite - Vizija</h2><hr>
 <br>
 <p><cite><b>-Opis problema:</b></cite>&nbsp Restorani ne mogu sa svojim dnevnim menijem odgovarati svakome svaki dan, niti im gosti mogu znati ima li u određenom trenutku mjesta u restoranu.<br>
@@ -22,8 +22,8 @@ Odgovornosti: Smije čitati osnovne informacije koje pruža administrator i pru�
 <p>Opis: Koristi aplikaciju kao davatelj osnovnih informacija o uslugama i ima uvid u informacije koje pružaju gosti.
 Odgovornosti: Smije čitati sve informacije u bazi i mijenjati informacije koje sam pruža.</p><br><br>
 
-<cite>Rade na projektu: Ivan Miloš, Luka Marić, Ivan Martinović, Marko Baškarad.</cite><br><br>
-</div><br>
+<cite>Rade na projektu: Ivan Miloš, Luka Marić, Ivan Martinović, Marko Baškarad.</cite><br><br><br>
+</div>
 
 @include('inc.footer')
 @endsection

@@ -7,7 +7,7 @@
       <p><samp>-- Uživajte u najboljim jelima! --</samp></p>   <hr>
     </div>
   </div>
-  <div class="container-fluid"><br>
+  <div id="meni" class="container-fluid b-gray"><br>
   <input class="form-control" id="myInput" type="text" placeholder="Pretražite meni..."><br>
   <div class="table-responsive">
   <table  class="table table-striped table-bordered" >
@@ -22,7 +22,7 @@
     <tbody id="myTable">
       @foreach($menis as $row)
       <tr>
-        <td style="width:35%;height:60%;"><img class="img-responsive" src="{{$row->link_slike}}"></td>
+        <td style="width:35%;height:60%;"><img class="grow img-responsive" src="{{$row->link_slike}}"></td>
         <td class="text-center"><b>{{$row->naziv}}</b></td>
         <td class="text-center"><b>{{$row->cijena}}</b></td>
         <td class="text-center"><b>{{$row->sastojci}}</b></td>

@@ -41,4 +41,9 @@ class PagesController extends Controller
     {
       return view('stranice.create_rec');
     }
+
+    public function izmjena()
+    {
+      return view('stranice.izmjena');
+    }
 }

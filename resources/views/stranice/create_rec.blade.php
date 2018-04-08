@@ -9,15 +9,15 @@
     @csrf
 
     <div class="form-group">
-      <label>&nbsp;Naslov</label>
+      <label class="b">&nbsp;Naslov</label>
       <input type="text" class="form-control" name="title">
     </div><br>
     <div class="form-group">
-      <label>&nbsp;Tekst</label>
+      <label class="b">&nbsp;Tekst</label>
       <textarea class="form-control" rows="5" name="body"></textarea><br>
     </div>
-    <div class="text-center">
-    <input type="submit" value="Potvrdi!" class="btn btn-success">
+    <div class="text-center grow">
+    <input type="submit" value="Potvrdi!" class="btn btn-success b">
   </div>
     <br>
   </form><br>

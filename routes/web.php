@@ -19,6 +19,8 @@ Route::get('/vizija','PagesController@vizija');
 Route::get('/recenzije','PagesController@rec');
 Route::get('/create_rec','PagesController@stvoriRec');
 Route::post('/create_rec/spremiRec','RecenzijeController@store');
+Route::get('/izmjena','PagesController@izmjena');
+Route::put('/izmjena/{id}','UserController@updateUser');
 
 Route::get('/admin', 'AdminLteController@admin');
 Route::get('/admin/recenzije','AdminLteController@recenzije');

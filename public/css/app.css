@@ -4,6 +4,34 @@
   color: darkblue;
 }
 
+#rec {
+  background: #757F9A;
+  /* fallback for old browsers */
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-gradient(linear, left top, right top, from(#D7DDE8), to(#757F9A));
+  background: linear-gradient(to right, #D7DDE8, #757F9A);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+#o-nama {
+  background: #abbaab;
+  /* fallback for old browsers */
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-gradient(linear, left top, right top, from(#ffffff), to(#abbaab));
+  background: linear-gradient(to right, #ffffff, #abbaab);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+#vizija {
+  background: #606c88;
+  /* fallback for old browsers */
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-gradient(linear, left top, right top, from(#3f4c6b), to(#606c88));
+  background: linear-gradient(to right, #3f4c6b, #606c88);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: white;
+}
+
 h4 {
   font-family: 'Play', sans-serif;
 }
@@ -43,7 +71,12 @@ h4 {
 }
 
 #uvod {
-  background-color: #F0F0F0;
+  background: #757F9A;
+  /* fallback for old browsers */
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-gradient(linear, left top, right top, from(#D7DDE8), to(#757F9A));
+  background: linear-gradient(to right, #D7DDE8, #757F9A);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 #uvod h2 {
@@ -55,7 +88,12 @@ h4 {
 }
 
 #kontakt {
-  background-color: #F0F0F0;
+  background: #757F9A;
+  /* fallback for old browsers */
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-gradient(linear, left top, right top, from(#D7DDE8), to(#757F9A));
+  background: linear-gradient(to right, #D7DDE8, #757F9A);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 hr {
@@ -65,10 +103,10 @@ hr {
           box-shadow: 0 10px 10px -10px #8c8b8b inset;
 }
 
-#prvi,
-#treci {
-  background-color: gray;
-}
+/*#prvi,#treci {
+	 background: #757F9A;  /* fallback for old browsers */
+
+/* background: -webkit-linear-gradient(to right, #D7DDE8, #757F9A);  /* Chrome 10-25, Safari 5.1-6 */
 
 .fa-facebook {
   color: darkblue;

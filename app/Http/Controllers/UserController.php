@@ -150,8 +150,30 @@ class UserController extends Controller
 
         return back();
 
+    }
+
+    public function updateUser(Request $request, $id)
+    {
+        //
+        $this->validate(request(),[
+
+            'novoIme' => 'required',
+            'noviMail' => 'required'
+        ]);
+
+        $user = User::findOrFail($id);
 
 
+        $user->name = $request->get('novoIme');
+        $user->admin = '0';
+        $user->email = $request->get('noviMail');
+        $user->password = bcrypt($request->get('novaLozinka'));
+
+        $user->save();
+
+        session()->flash('message','Uspješna izmjena podataka!');
+
+        return back();
 
     }
 

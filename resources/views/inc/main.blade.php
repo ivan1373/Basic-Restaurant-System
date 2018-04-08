@@ -1,6 +1,6 @@
 <div id="tehnologije" class="container text-center" style="padding-top:28px;padding-bottom:20px;">
   <h2>Korištene Tehnologije</h2>
-  <button class="btn btn-warning btn-xs" @click="show = !show"><cite>UKLONI!</cite></button>
+  <button class="btn btn-warning btn-xs grow" @click="show = !show"><cite>UKLONI!</cite></button>
   <hr><br>
   <transition
    name="custom-classes-transition"
@@ -9,38 +9,41 @@
    >
   <div v-if="show" class="row well">
 
-    <div class="col-sm-6" >
+    <div class="grow col-sm-6" ><br>
       <h3><i>FRONTEND</i></h3><hr><br>
       <ul class="list-group" style="list-style-type:none;font-family: 'Open Sans Condensed', sans-serif;">
         <li class="list-group-item">
-          <h4><i class="devicon-html5-plain-wordmark colored"></i><b> HTML5</b> -- osnovna struktura</h4>
+          <h4 class="bg-animate hover-bg-light-purple"><i class="devicon-html5-plain-wordmark colored"></i><b> HTML5</b> -- osnovna struktura</h4>
         </li>
         <li class="list-group-item">
-          <h4><i class="devicon-css3-plain-wordmark colored"></i><b> CSS3</b> -- osnovna stilizacija i uređivanje</h4>
+          <h4 class="bg-animate hover-bg-light-purple"><i class="devicon-css3-plain-wordmark colored"></i><b> CSS3</b> -- osnovna stilizacija i uređivanje</h4>
         </li>
         <li class="list-group-item">
-          <h4><i class="devicon-bootstrap-plain-wordmark colored"></i><b> BOOSTRAP 4</b> -- napredna stilizacija i uređivanje</h4>
+          <h4 class="bg-animate hover-bg-light-purple"><i class="devicon-bootstrap-plain-wordmark colored"></i><b> BOOSTRAP 4</b> -- napredna stilizacija i uređivanje</h4>
         </li>
         <li class="list-group-item">
-          <h4><i class="devicon-javascript-plain colored"></i><b> JAVASCRIPT</b> -- smooth scroll</h4>
+          <h4 class="bg-animate hover-bg-light-purple"><i class="devicon-javascript-plain colored"></i><b> JAVASCRIPT</b> -- smooth scroll</h4>
         </li>
         <li class="list-group-item">
-          <h4><i class="devicon-jquery-plain-wordmark colored"></i><b> JQUERY</b> -- efekti i animacije ...</h4>
+          <h4 class="bg-animate hover-bg-light-purple"><i class="devicon-jquery-plain-wordmark colored"></i><b> JQUERY</b> -- efekti i animacije ...</h4>
         </li>
         <li class="list-group-item">
-          <h4><i class="devicon-vuejs-plain-wordmark colored"></i><b> VUE</b> -- dodatni efekti</h4>
+          <h4 class="bg-animate hover-bg-light-purple"><i class="devicon-vuejs-plain-wordmark colored"></i><b> VUE</b> -- dodatni efekti</h4>
+        </li>
+        <li class="list-group-item">
+          <h4 class="bg-animate hover-bg-light-purple"><b> TACHYONS</b> -- hover animacije na stranici</h4>
         </li>
 
       </ul>
     </div>
-    <div class="col-sm-6">
+    <div class="grow col-sm-6"><br>
       <h3><i>BACKEND</i></h3><hr><br>
       <ul style="list-style-type:none;font-family: 'Open Sans Condensed', sans-serif;">
         <li class="list-group-item">
-          <h4><i class="devicon-laravel-plain-wordmark colored"></i><b> LARAVEL</b> -- framework PHP-a</h4>
+          <h4 class="bg-animate hover-bg-light-purple"><i class="devicon-laravel-plain-wordmark colored"></i><b> LARAVEL</b> -- framework PHP-a</h4>
         </li>
         <li class="list-group-item">
-          <h4><i class="devicon-mysql-plain-wordmark colored"></i><b> MYSQL</b> -- baza podataka</h4>
+          <h4 class="bg-animate hover-bg-light-purple"><i class="devicon-mysql-plain-wordmark colored"></i><b> MYSQL</b> -- baza podataka</h4>
         </li>
 
       </ul>
@@ -51,12 +54,12 @@
 <div id="testni" class="container text-center" style="padding-top:28px;padding-bottom:20px;">
   <h2>Testni Podaci</h2><hr><br>
   <div class="row well">
-    <div class="col-sm-6">
+    <div class="grow col-sm-6">
       <h3>LOGIRANI KORISNIK</h3><hr><br>
         <ul style="list-style-type:none;font-family: 'Open Sans Condensed', sans-serif;">
         </ul>
     </div>
-    <div class="col-sm-6">
+    <div class="grow col-sm-6">
       <h3>ADMINISTRATOR</h3><hr><br>
       <ul style="list-style-type:none;font-family: 'Open Sans Condensed', sans-serif;">
       </ul>
@@ -66,17 +69,17 @@
 <div id="uvod" class="text-center container-fluid">
   			<h2>DOBRODOŠLI!</h2><hr><br>
   			<div class="row slideanim">
-    			<div class="col-sm-4">
+    			<div class="col-sm-4 grow">
       				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean scelerisque convallis sapien, et pellentesque sem aliquam sit amet. Nunc vitae tellus facilisis, placerat quam eu, aliquet orci. Donec in lobortis elit. Aliquam erat volutpat. Vivamus semper rutrum bibendum. Ut vitae fringilla turpis, at consectetur tortor. Quisque pretium et arcu non volutpat.</p>
-      			<img src="./images/ikona1.svg" class="img-responsive margin" style="width:35%" alt="Image">
+      			<img src="./images/ikona1.svg" class="img-responsive margin grow" style="width:35%" alt="Image">
     			</div>
-    		<div class="col-sm-4">
+    		<div class="col-sm-4 grow">
       			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean scelerisque convallis sapien, et pellentesque sem aliquam sit amet. Nunc vitae tellus facilisis, placerat quam eu, aliquet orci. Donec in lobortis elit. Aliquam erat volutpat. Vivamus semper rutrum bibendum. Ut vitae fringilla turpis, at consectetur tortor. Quisque pretium et arcu non volutpat.</p>
-      			<img src="./images/ikona2.svg" class="img-responsive margin" style="width:35%" alt="Image">
+      			<img src="./images/ikona2.svg" class="img-responsive margin grow" style="width:35%" alt="Image">
     		</div>
-    		<div class="col-sm-4">
+    		<div class="col-sm-4 grow">
       			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean scelerisque convallis sapien, et pellentesque sem aliquam sit amet. Nunc vitae tellus facilisis, placerat quam eu, aliquet orci. Donec in lobortis elit. Aliquam erat volutpat. Vivamus semper rutrum bibendum. Ut vitae fringilla turpis, at consectetur tortor. Quisque pretium et arcu non volutpat.</p>
-      			<img src="./images/ikona3.svg" class="img-responsive margin" style="width:35%" alt="Image">
+      			<img src="./images/ikona3.svg" class="img-responsive margin grow" style="width:35%" alt="Image">
     		</div>
   			</div>
 		</div>
@@ -86,7 +89,7 @@
 				<div class="col-sm-6">
 					<img src="./images/ikona.png" class="img-responsive" alt="Image" style="width:50%">
 				</div>
-				<div class="col-sm-6">
+				<div class="col-sm-6 grow">
 					<br><br><br>
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean scelerisque convallis sapien, et pellentesque sem aliquam sit amet. Nunc vitae tellus facilisis, placerat quam eu, aliquet orci. Donec in lobortis elit. Aliquam erat volutpat. Vivamus semper rutrum bibendum. Ut vitae fringilla turpis, at consectetur tortor. Quisque pretium et arcu non volutpat.</p><br><br><br>
 					<div id="soc-mreze">
