@@ -15,6 +15,7 @@ Route::get('/', 'PagesController@index');
 
 Route::get('/meni', 'PagesController@meni');
 Route::get('/rezervacija','PagesController@rezervacija');
+Route::post('/rezervacija/spremiRez','RezervacijaController@store');
 Route::get('/vizija','PagesController@vizija');
 Route::get('/recenzije','PagesController@rec');
 Route::get('/create_rec','PagesController@stvoriRec');
@@ -37,6 +38,8 @@ Route::put('/admin/pregl_meni/urediMeni/{id}','MeniController@update');
 Route::post('/admin/dodaj/spremi', 'MeniController@store');
 Route::get('/admin/pregl_meni/brisi/{id}','MeniController@destroy');
 Route::get('/admin/pregled/brisi/{id}','UserController@destroy');
+Route::get('/admin/pregl_rez/brisi/{id}','RezervacijaController@destroy');
+Route::get('/admin/pregl_rez/prihvati/{id}','RezervacijaController@update');
 
 Auth::routes();
 

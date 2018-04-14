@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Meni;
 use App\User;
 use App\recenzija;
+use App\Rezervacija;
 
 class AdminLteController extends Controller
 {
@@ -18,8 +19,9 @@ class AdminLteController extends Controller
     {
       $menisbr = Meni::count();
       $usernm = User::count();
+      $brrez = Rezervacija::count();
 
-      return view('admin.dashboard', compact('menisbr', 'usernm'));
+      return view('admin.dashboard', compact('menisbr', 'brrez', 'usernm'));
     }
 
     public function admindodaj()
@@ -53,7 +55,8 @@ class AdminLteController extends Controller
 
     public function adminrez()
     {
-      return view('admin.pregl_rez');
+      $rezs = Rezervacija::all();
+      return view('admin.pregl_rez')->with('rezs',$rezs);
     }
 
 

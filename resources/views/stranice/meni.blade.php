@@ -7,7 +7,7 @@
       <p><samp>-- Uživajte u najboljim jelima! --</samp></p>   <hr>
     </div>
   </div>
-  <div id="meni" class="container-fluid b-gray"><br>
+  <div id="meni" class="container-fluid"><br>
   <input class="form-control" id="myInput" type="text" placeholder="Pretražite meni..."><br>
   <div class="table-responsive">
   <table  class="table table-striped table-bordered" >
@@ -32,7 +32,7 @@
   </table>
 </div>
 </div>
-<div class="container-fluid" id="lokacija" style="margin-bottom:35px;margin-top:35px;">
+<div class="container-fluid" id="lokacija-meni" style="padding-bottom:35px;padding-top:35px;">
   <div class="row slideanim">
     <div class="col-sm-6 text-center" style="padding-top:125px;">
       <h2>Naša lokacija --></h2><hr>

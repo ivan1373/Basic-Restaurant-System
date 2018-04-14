@@ -2,10 +2,10 @@
               <div class="container-fluid">
                 <div class="row">
                 <div class="col-sm-6">
-                  <iframe src="http://free.timeanddate.com/clock/i64u3l4a/n3660/tlba30/fcfff/tc343a40/pc343a40/ftb/tt0" frameborder="0" width="268" height="18"></iframe>
+                  <iframe class="grow" src="http://free.timeanddate.com/clock/i64u3l4a/n3660/tlba30/fcfff/tc343a40/pc343a40/ftb/tt0" frameborder="0" width="268" height="18"></iframe>
                 </div>
                 <div class="col-sm-6 text-danger">
-                  <h6><b>&copy Projekt RWA 2018</b></h6>
+                  <h6><b class="grow">&copy Projekt RWA 2018</b></h6>
                 </div>
               </div>
             </div>

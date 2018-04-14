@@ -53,7 +53,7 @@
 
             <div class="info-box-content">
               <span class="info-box-text">Broj Rezervacija</span><br>
-              <span class="info-box-number text-center" style="color:#000000;">...</span>
+              <span class="info-box-number text-center" style="color:#000000;">{{$brrez}}</span>
             </div>
             <!-- /.info-box-content -->
           </div>
