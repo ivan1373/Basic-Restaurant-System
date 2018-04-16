@@ -1,0 +1,11 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+#sss:hover {
+    -fx-background-color:greenyellow!important;
+}
+
+#ddd:hover {
+    -fx-background-color:green!important;
+}

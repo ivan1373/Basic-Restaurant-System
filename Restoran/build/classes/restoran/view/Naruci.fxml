@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="546.0" prefWidth="949.0" style="-fx-background-color: #888888;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="restoran.controller.NaručiController">
+    <stylesheets>
+        <URL value="@naruči.css" />
+    </stylesheets>
+   <children>
+      <JFXButton layoutX="104.0" layoutY="455.0" onAction="#naruci" prefHeight="61.0" prefWidth="123.0" style="-fx-background-color: orange;" text="NARUČI">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="539.0" layoutY="455.0" onAction="#odustani" prefHeight="61.0" prefWidth="123.0" style="-fx-background-color: #e44f4f;" text="ODUSTANI">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXButton>
+      <TableView fx:id="tblMeni0" layoutX="399.0" layoutY="14.0" onMouseClicked="#odaberiprvi" prefHeight="379.0" prefWidth="526.0">
+        <columns>
+          <TableColumn fx:id="colNaziv0" prefWidth="155.0" text="NAZIV" />
+          <TableColumn fx:id="colVrsta0" prefWidth="177.0" text="VRSTA" />
+            <TableColumn fx:id="colCijena0" prefWidth="193.0" text="CIJENA" />
+        </columns>
+      </TableView>
+      <JFXTextField fx:id="txtNaziv" layoutX="131.0" layoutY="120.0" unFocusColor="#a1a1a1" />
+      <JFXTextField fx:id="txtVrsta" labelFloat="true" layoutX="131.0" layoutY="163.0" unFocusColor="#abaaaa" />
+      <JFXTextField fx:id="txtcijena" layoutX="131.0" layoutY="205.0" unFocusColor="#ababab" />
+      <Label layoutX="62.0" layoutY="259.0" text="KOLIČINA" textFill="#f8f8f8" />
+      <JFXTextField fx:id="txtKol" layoutX="131.0" layoutY="247.0" promptText="unesite" unFocusColor="#bfbcbc" />
+      <JFXCheckBox fx:id="placanje1" layoutX="68.0" layoutY="367.0" text="gotovina" textFill="WHITE" unCheckedColor="WHITE" />
+      <JFXCheckBox fx:id="placanje2" layoutX="213.0" layoutY="367.0" text="kreditna kartica" textFill="WHITE" unCheckedColor="WHITE" />
+   </children>
+</AnchorPane>

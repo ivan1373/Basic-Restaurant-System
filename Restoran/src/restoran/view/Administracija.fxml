@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="sss" prefHeight="493.0" prefWidth="677.0" style="-fx-background-color: white;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="restoran.controller.AdministracijaController">
+    <stylesheets>
+        <URL value="@administracija.css" />
+    </stylesheets>
+   <children>
+      <JFXButton buttonType="RAISED" layoutX="301.0" layoutY="201.0" onAction="#otvoriNarudzbe" prefHeight="92.0" prefWidth="133.0" style="-fx-background-color: orange; -fx-opacity: 0.8;" text="NARUDŽBE" textFill="WHITE" />
+      <JFXButton buttonType="RAISED" layoutX="494.0" layoutY="109.0" onAction="#otvoriMeni" prefHeight="92.0" prefWidth="133.0" style="-fx-background-color: orange; -fx-opacity: 0.8;" text="MENI" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="494.0" layoutY="293.0" onAction="#odjavise" prefHeight="92.0" prefWidth="133.0" style="-fx-background-color: orange; -fx-opacity: 0.8;" text="ODJAVA" textFill="WHITE" />
+      <Label layoutX="381.0" layoutY="14.0" prefHeight="35.0" prefWidth="161.0" style="-fx-font-style: italic;" text="ADMINISTRACIJA" textAlignment="CENTER">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Pane layoutX="-10.0" prefHeight="493.0" prefWidth="224.0" style="-fx-background-color: #333333;">
+         <children>
+            <JFXButton layoutX="50.0" layoutY="415.0" onAction="#otvori_upr" prefHeight="64.0" prefWidth="124.0" style="-fx-background-color: orange;" text="user management" />
+         </children>
+      </Pane>
+      <Separator layoutX="214.0" layoutY="37.0" prefHeight="46.0" prefWidth="467.0" />
+   </children>
+</AnchorPane>

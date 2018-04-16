@@ -1,0 +1,110 @@
+h4 {
+	font-family: 'Play', sans-serif;
+}
+
+.col-sm-4 p, .col-sm-6 p {
+	font-family: 'Rajdhani', sans-serif;
+	font-weight:bold;
+}
+
+.col-sm-4 p::first-letter, .col-sm-6 p::first-letter {
+	font-size:200%;
+	color:red;
+	font-weight: bolder!important;
+}
+
+#uvod,#kontakt,#o-nama {
+      padding-top:35px;
+      padding-bottom:35px;
+  }
+	.img-responsive{width:100%;}
+
+#o-nama h2{
+	text-align:right!important;
+	font-family: 'Courgette', cursive;
+}
+
+#kontakt h2{
+	text-align:left!important;
+	font-family: 'Courgette', cursive;
+}
+
+#uvod {
+	background-color:#F0F0F0;
+}
+
+#uvod h2{
+	font-family: 'Courgette', cursive;
+}
+
+#lokacija .row h2 {
+	font-family: 'Courgette', cursive;
+}
+
+#kontakt {
+	background-color:#F0F0F0;
+}
+ hr {
+ 	height: 10px;
+	border: 0;
+	box-shadow: 0 10px 10px -10px #8c8b8b inset;
+ }
+ #prvi,#treci {
+	background-color:gray;
+}
+.fa-facebook {
+	color:darkblue;
+}
+
+.fa-twitter {
+	color:lightblue;
+}
+
+.fa-google-plus {
+	color:red;
+}
+
+td b{
+	font-family: 'Cormorant Garamond', serif;
+	font-size:1.51em;
+}
+
+th{
+	font-size:1.57em;
+}
+
+div hr{
+	height: 12px;
+    border: 0;
+    box-shadow: inset 0 12px 12px -12px rgba(0, 0, 0, 0.5);
+}
+
+//proba
+.slideanim {visibility:hidden;}
+  .slide {
+      animation-name: slide;
+      -webkit-animation-name: slide;
+      animation-duration: 1s;
+      -webkit-animation-duration: 1s;
+      visibility: visible;
+  }
+  @keyframes slide {
+    0% {
+      opacity: 0;
+      transform: translateY(70%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+  @-webkit-keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }
+  }

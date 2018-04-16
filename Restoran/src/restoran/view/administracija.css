@@ -1,0 +1,10 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.AdministracijaController {
+   
+    -fx-background-image: url("pizza.jpg")!important;
+    
+}
+

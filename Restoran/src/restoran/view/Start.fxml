@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="465.0" prefWidth="749.0" style="-fx-background-color: #38A57E;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="restoran.controller.StartController">
+    <stylesheets>
+        <URL value="@start.css" />
+    </stylesheets>
+   <children>
+      <Pane layoutY="130.0" prefHeight="339.0" prefWidth="749.0" style="-fx-background-color: #eeeeee;">
+         <children>
+            <JFXButton id="ddd" fx:id="btnRegistracija" layoutX="542.0" layoutY="164.0" onAction="#Registracija" prefHeight="77.0" prefWidth="129.0" style="-fx-background-color: #1ABC9C;" text="Registracija">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXButton>
+            <JFXButton id="sss" fx:id="btnPrijava" layoutX="76.0" layoutY="164.0" onAction="#Prijava" prefHeight="77.0" prefWidth="129.0" style="-fx-background-color: #1ABC9C;" text="Prijava">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXButton>
+            <Label layoutX="92.0" layoutY="252.0" text="Već imate račun?">
+               <font>
+                  <Font name="Ebrima" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="556.0" layoutY="252.0" text="Novi ste korisnik?">
+               <font>
+                  <Font name="Ebrima" size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Label layoutX="297.0" layoutY="46.0" style="-fx-font-style: italic; -fx-font-weight: bold;" text="DOBRODOŠLI" textFill="#e1dcd1">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

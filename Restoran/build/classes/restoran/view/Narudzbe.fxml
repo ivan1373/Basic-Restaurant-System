@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="519.0" prefWidth="738.0" style="-fx-background-color: #FFFFFF;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="restoran.controller.NarudžbeController">
+    <stylesheets>
+        <URL value="@narudžbe.css" />
+    </stylesheets>
+   <children>
+      <TableView fx:id="narudzbeTbl" prefHeight="420.0" prefWidth="532.0">
+        <columns>
+          <TableColumn fx:id="imeCol" prefWidth="150.0" text="naziv" />
+            <TableColumn fx:id="datumCol" prefWidth="175.0" text="datum" />
+            <TableColumn fx:id="cijenaCol" prefWidth="206.0" text="cijena" />
+        </columns>
+      </TableView>
+      <Label fx:id="ispis" layoutX="86.0" layoutY="445.0" prefHeight="32.0" prefWidth="438.0" text=" " textFill="#10da0c">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <JFXButton layoutX="589.0" layoutY="417.0" onAction="#osvjezi" prefHeight="57.0" prefWidth="110.0" style="-fx-background-color: lightgreen;" text="OSVJEZI">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="161.0" fitWidth="130.0" layoutX="569.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@search.jpg" />
+         </image>
+      </ImageView>
+      <JFXButton layoutX="671.0" layoutY="14.0" onAction="#nazad" prefHeight="39.0" prefWidth="56.0" style="-fx-background-color: GRAY;" text="NAZAD" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="388.0" prefWidth="689.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="restoran.controller.AboutController">
+   <children>
+      <ImageView fitHeight="467.0" fitWidth="689.0" onMouseClicked="#nazad" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@slika.jpg" />
+         </image>
+      </ImageView>
+      <Label fx:id="XD" layoutX="391.0" layoutY="23.0" prefHeight="17.0" prefWidth="251.0" style="-fx-font-weight: BOLDER;" text="PROGRAMSKA PODRŠKA" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="220.0" layoutY="344.0" prefHeight="30.0" prefWidth="455.0" style="-fx-font-weight: BOLDER;" text="ZA NARUDŽBE U UGOSTITELJSKIM OBJEKTIMA" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
