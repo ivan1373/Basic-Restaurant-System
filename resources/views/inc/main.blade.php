@@ -40,10 +40,10 @@
       <h3><i>BACKEND</i></h3><hr><br>
       <ul style="list-style-type:none;font-family: 'Open Sans Condensed', sans-serif;">
         <li class="list-group-item">
-          <h4 class="bg-animate hover-bg-light-purple"><i class="devicon-laravel-plain-wordmark colored"></i><b> LARAVEL</b> -- framework PHP-a</h4>
+          <h4 class="bg-animate hover-bg-light-blue"><i class="devicon-laravel-plain-wordmark colored"></i><b> LARAVEL</b> -- framework PHP-a</h4>
         </li>
         <li class="list-group-item">
-          <h4 class="bg-animate hover-bg-light-purple"><i class="devicon-mysql-plain-wordmark colored"></i><b> MYSQL</b> -- baza podataka</h4>
+          <h4 class="bg-animate hover-bg-light-blue"><i class="devicon-mysql-plain-wordmark colored"></i><b> MYSQL</b> -- baza podataka</h4>
         </li>
 
       </ul>
@@ -55,13 +55,19 @@
   <h2>Testni Podaci</h2><hr><br>
   <div class="row well">
     <div class="grow col-sm-6">
-      <h3>LOGIRANI KORISNIK</h3><hr><br>
+      <h3>REGISTRIRANI KORISNIK</h3><hr><br>
         <ul style="list-style-type:none;font-family: 'Open Sans Condensed', sans-serif;">
+          <li class="list-group-item">
+            <h4 class="bg-animate hover-bg-light-gray">detalji na <a href="http://apllikacija.herokuapp.com/">web-stranici</a></h4>
+          </li>
         </ul>
     </div>
     <div class="grow col-sm-6">
       <h3>ADMINISTRATOR</h3><hr><br>
       <ul style="list-style-type:none;font-family: 'Open Sans Condensed', sans-serif;">
+        <li class="list-group-item">
+          <h4 class="bg-animate hover-bg-light-green">detalji na <a href="http://apllikacija.herokuapp.com/">web-stranici</a></h4>
+        </li>
       </ul>
     </div>
   </div>
