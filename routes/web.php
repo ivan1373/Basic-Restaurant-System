@@ -11,14 +11,21 @@
 |
 */
 
+//osigurava da samo admin moze pristupiti navedenim stranicama
+Route::get('admin', ['middleware' => ['auth', 'admin'], function() {
+    return "this page requires that you be logged in and an Admin";
+
+}]);
+
+
 Route::get('/', 'PagesController@index');
 
 Route::get('/meni', 'PagesController@meni');
-Route::get('/rezervacija','PagesController@rezervacija');
+Route::get('/rezervacija','RezervacijaController@index');
 Route::post('/rezervacija/spremiRez','RezervacijaController@store');
 Route::get('/vizija','PagesController@vizija');
 Route::get('/recenzije','PagesController@rec');
-Route::get('/create_rec','PagesController@stvoriRec');
+Route::get('/create_rec','RecenzijeController@index');
 Route::post('/create_rec/spremiRec','RecenzijeController@store');
 Route::get('/izmjena','PagesController@izmjena');
 Route::put('/izmjena/{id}','UserController@updateUser');
@@ -46,11 +53,7 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 
-//osigurava da samo admin moze pristupiti navedenim stranicama
-Route::get('admin', ['middleware' => ['auth', 'admin'], function() {
-    return "this page requires that you be logged in and an Admin";
 
-}]);
 
 
 Route::get('admin', ['uses' => 'AdminLteController@admin', 'middleware' => ['auth', 'admin']]);
